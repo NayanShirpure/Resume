@@ -6,220 +6,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nayan Shirpure Resume</title>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+        }
+
+        .contact-info span {
+            margin-right: 10px;
+        }
+
+        .about,
+        .education,
+        .projects,
+        .skills,
+        .interests {
+            background-color: #fff;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .about.animated,
+        .education.animated,
+        .projects.animated,
+        .skills.animated,
+        .interests.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about h2,
+        .education h2,
+        .projects h2,
+        .skills h2,
+        .interests h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #333;
+        }
+
+        .details {
+            flex: 1;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="full-name">
-                <span class="first-name">Nayan</span>
-                <span class="last-name">Shirpure</span>
-            </div>
+    <header class="animated">
+        <div class="container">
+            <h1>Nayan Shirpure </h1>
             <div class="contact-info">
-                <span class="email">Email: </span>
-                <span class="email-val"><a href="mailto:nayanshirpure@gmail.com">nayanshirpure@gmail.com</a></span>
-                <span class="separator"></span>
-                <span class="phone">Phone: </span>
-                <span class="phone-val"><a href="tel:+919545315472">9545315472</a></span>
-            </div>
-
-            <div class="about">
-                <span class="position">Career Objective:</span>
-                <span class="desc">
-                    Enthusiastic CSE graduate seeking an entry-level role in software development or related fields.
-                    Proficient in Android Studio,Java Python, eager to contribute to innovative projects and grow
-                    professionally within the industry. </span>
+                <span>Email: </span>
+                <span><a href="mailto:nayanshirpure@gmail.com">nayanshirpure@gmail.com</a></span>
+                <span>|</span>
+                <span>Phone: </span>
+                <span><a href="tel:+919545315472">9545315472</a></span>
             </div>
         </div>
-        <div class="details">
-            <div class="section">
-                <div class="section__list">
-                    <div class="section__list-item">
-                    </div>
-                    <div class="section__list-item">
-                    </div>
+    </header>
 
+    <section class="about animated">
+        <div class="container">
+            <h2>Career Objective: 🎯</h2>
+            <p>Enthusiastic CSE graduate seeking an entry-level role in software development or related fields. Proficient in Android Studio, Java, Python, eager to contribute to innovative projects and grow professionally within the industry.</p>
+        </div>
+    </section>
+
+    <section class="education animated">
+        <div class="container">
+            <h2>Education 📚</h2>
+            <div class="card">
+                <div class="details">
+                    <div class="title">Sant. Gadge Baba Amravati University</div>
+                    <div class="description">Sau. Kamlatai Gawai Institute of Engineering and Technology</div>
+                    <div class="description">Jan 2021 - Feb 2024</div>
                 </div>
+                <i class="icon fas fa-graduation-cap"></i>
             </div>
-            <div class="section">
-                <div class="section__title">Education</div>
-                <div class="section__list">
-                    <div class="section__list-item">
-                        <div class="left">
-                            <div class="name">Sant. Gadge Baba Amravati University
-                            </div>
-                            <div class="addr">Sau. Kamlatai Gawai Institute of Engineering and Technology</div>
-                            <div class="duration">Jan 2021 - Feb 2024</div>
-                        </div>
-                        <div class="right">
-                            <div class="name">Computer Science and Engineering</div>
-                            <div class="desc"></div>
-                        </div>
-                    </div>
-                    <div class="section__list-item">
-                        <div class="left">
-                            <div class="name">Gvernment Polytechnic, Achalpur</div>
-                            <div class="addr"></div>
-                            <div class="duration">Jan 2018 - Feb 2021</div>
-                        </div>
-                        <div class="right">
-                            <div class="name">Diploma in Computer Science and Engineering</div>
-                            <div class="desc">Percentage: 80.69%</div>
-                        </div>
-                    </div>
-
-                    <div class="section__list-item">
-                        <div class="left">
-                            <div class="name">Siddharth High School</div>
-                            <div class="addr"></div>
-                            <div class="duration">Jan 2017 - Feb 2018</div>
-                        </div>
-                        <div class="right">
-                            <div class="name">HSC</div>
-                            <div class="desc">Percentage: 46%</div>
-                        </div>
-                    </div>
-                    <div class="section__list-item">
-                        <div class="left">
-                            <div class="name">SG Boys High School</div>
-                            <div class="addr"></div>
-                            <div class="duration">Jan 2015 - Feb 2016</div>
-                        </div>
-                        <div class="right">
-                            <div class="name">SSC</div>
-                            <div class="desc">Percentage: 64.80%</div>
-                        </div>
-                    </div>
+            <div class="card">
+                <div class="details">
+                    <div class="title">Gvernment Polytechnic, Achalpur</div>
+                    <div class="description">Jan 2018 - Feb 2021</div>
                 </div>
-
+                <i class="icon fas fa-graduation-cap"></i>
             </div>
-            <div class="section">
-                <div class="section__title">Projects</div>
-                <div class="section__list">
-                    <div class="section__list-item">
-                        <div class="name">Covid-19 Application</div>
-                        <div class="text">
-                            Creating a COVID-19 app to provide real-time updates requires integrating reliable data sources, such as APIs from health organizations like the World Health Organization (WHO) or the Centers for Disease Control and Prevention (CDC). Here's a breakdown
-                            of essential features and considerations:
-                            <ul>
-                                <li>Real-Time Data Integration</li>
-                                <li>Geolocation-Based Updates</li>
-                                <li>Interactive Dashboards</li>
-                                <li> Push Notifications Safety Guidelines</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="section__list-item">
-                        <div class="name">Video Streaming Application</div>
-                        <div class="text">Creating a video streaming application for anime TV Series and Movies.
-                            <ul>
-                               
-
-
-                                <li>Design and User Interface</li>
-                                <li>User Experience (UX) Optimization</li>
-                                <li>Testing and Quality Assurance </li>
-                                <li>Integration with Zoro API </li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="card">
+                <div class="details">
+                    <div class="title">Siddharth High School</div>
+                    <div class="description">Jan 2017 - Feb 2018</div>
+                    <div class="description">HSC Percentage: 46%</div>
                 </div>
+                <i class="icon fas fa-graduation-cap"></i>
             </div>
-            <div class="section">
-                <div class="section__title">Skills</div>
-                <div class="skills">
-                    <div class="skills__item">
-                        <div class="left">
-                            <div class="name">
-                                Android Developement
-                            </div>
-                        </div>
-                        <div class="right">
-                            <input id="ck1" type="checkbox" checked />
-
-                            <label for="ck1"></label>
-                            <input id="ck2" type="checkbox" checked />
-
-                            <label for="ck2"></label>
-                            <input id="ck3" type="checkbox" checked/>
-
-                            <label for="ck3"></label>
-                            <input id="ck4" type="checkbox" />
-                            <label for="ck4"></label>
-                            <input id="ck5" type="checkbox" />
-                            <label for="ck5"></label>
-
-                        </div>
-                    </div>
-
+            <div class="card">
+                <div class="details">
+                    <div class="title">SG Boys High School</div>
+                    <div class="description">Jan 2015 - Feb 2016</div>
+                    <div class="description">SSC Percentage: 64.80%</div>
                 </div>
-                <div class="skills">
-                    <div class="skills__item">
-                        <div class="left">
-                            <div class="name">
-                                Java </div>
-                        </div>
-                        <div class="right">
-                            <input id="ck1" type="checkbox" checked />
-
-                            <label for="ck1"></label>
-                            <input id="ck2" type="checkbox" checked />
-
-                            <label for="ck2"></label>
-                            <input id="ck3" type="checkbox" checked/>
-
-                            <label for="ck3"></label>
-                            <input id="ck4" type="checkbox" />
-                            <label for="ck4"></label>
-                            <input id="ck5" type="checkbox" />
-                            <label for="ck5"></label>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="skills">
-                    <div class="skills__item">
-                        <div class="left">
-                            <div class="name">
-                                HTML, CSS </div>
-                        </div>
-                        <div class="right">
-                            <input id="ck1" type="checkbox" checked />
-
-                            <label for="ck1"></label>
-                            <input id="ck2" type="checkbox" checked />
-
-                            <label for="ck2"></label>
-                            <input id="ck3" type="checkbox" checked/>
-
-                            <label for="ck3"></label>
-                            <input id="ck4" type="checkbox" />
-                            <label for="ck4"></label>
-                            <input id="ck5" type="checkbox" />
-                            <label for="ck5"></label>
-
-                        </div>
-                    </div>
-
-                </div>
-                
-
-                <div class="section">
-                    <div class="section__title">
-                        Interests
-                    </div>
-                    <div class="section__list">
-                        <div class="section__list-item">
-                            Football, Programming, Gamming.
-                        </div>
-                    </div>
-                </div>
+                <i class="icon fas fa-graduation-cap"></i>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="projects animated">
+        <div class="container">
+            <h2>Projects 🛠️</h2>
+            <div class="card">
+                <div class="details">
+                    <div class="title">Covid-19 Application</div>
+                    <div class="description">Creating a COVID-19 app to provide real-time updates requires integrating reliable data sources, such as APIs from health organizations like the World Health Organization (WHO) or the Centers for Disease Control and Prevention (CDC). Here's a breakdown:</div>
+                    <ul>
+                        <li>Real-Time Data Integration</li>
+                        <li>Geolocation-Based Updates</li>
+                        <li>Interactive Dashboards</li>
+                        <li>Push Notifications Safety Guidelines</li>
+                    </ul>
+                </div>
+                <i class="icon fas fa-project-diagram"></i>
+            </div>
+            <div class="card">
+                <div class="details">
+                    <div class="title">Video Streaming Application</div>
+                    <div class="description">Creating a video streaming application for anime TV Series and Movies.</div>
+                    <ul>
+                        <li>Design and User Interface</li>
+                        <li>User Experience (UX) Optimization</li>
+                        <li>Testing and Quality Assurance</li>
+                        <li>Integration with Zoro API</li>
+                    </ul>
+                </div>
+                <i class="icon fas fa-project-diagram"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills animated">
+        <div class="container">
+            <h2>Skills 🛠️</h2>
+            <div class="card">
+                <div class="details">
+                    <div class="title">Android Development</div>
+                </div>
+                <i class="icon fab fa-android"></i>
+            </div>
+            <div class="card">
+                <div class="details">
+                    <div class="title">Java</div>
+                </div>
+                <i class="icon fab fa-java"></i>
+            </div>
+            <div class="card">
+                <div class="details">
+                    <div class="title">HTML, CSS</div>
+                </div>
+                <i class="icon fab fa-html5"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="interests animated">
+        <div class="container">
+            <h2>Interests 🎮</h2>
+            <div class="card">
+                <div class="details">
+                    <div class="description">Football ⚽, Programming 💻, Gaming 🎮.</div>
+                </div>
+                <i class="icon fas fa-heart"></i>
+            </div>
+        </div>
+    </section>
+
+    <footer class="animated">
+        <div class="container">
+            <p>&copy; 2024 Nayan Shirpure. All rights reserved. Made with ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.animated');
+            sections.forEach((section) => {
+                if (isElementInViewport(section)) {
+                    section.classList.add('fadeInUp');
+                }
+            });
+            window.addEventListener('scroll', function () {
+                sections.forEach((section) => {
+                    if (isElementInViewport(section)) {
+                        section.classList.add('fadeInUp');
+                    }
+                });
+            });
+
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+        });
+    </script>
 </body>
 
 </html>
